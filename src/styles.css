@@ -1,0 +1,112 @@
+body {
+  background-color: rgb(208, 247, 236);
+}
+
+/* Клас для зовнішнього контейнера завантаження */
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Стилі для завантажувача з cssloaders */
+.js-loader {
+  width: 48px;
+  height: 48px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.js-loader::after {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 3px solid;
+  border-color: #ff3d00 transparent;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Стилі для сповіщення в Notiflix */
+.error-message {
+  background-color: #ff6b6b;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.error-message button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.error-message button:hover {
+  text-decoration: underline;
+}
+
+.cat-info {
+  display: flex;
+  /* flex-direction: column; */
+  gap: 30px;
+  padding: 30px;
+  background-color: rgb(250, 241, 230);
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+.cat-card {
+  display: none;
+}
+
+.breed-select {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  min-width: 500px;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 20px;
+  background-color: rgb(254, 253, 253);
+}
+
+.loader {
+  margin-top: 50px;
+  color: red;
+  font-size: 20px;
+}
+
+.error {
+  color: red;
+  font-size: 20px;
+}
+
+.js-placeholder {
+  color: aqua;
+  font-size: larger;
+}
+
+.breed-select {
+  color: goldenrod;
+}
